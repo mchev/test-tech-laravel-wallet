@@ -23,6 +23,19 @@ test('dashboard page is displayed', function () {
         ]);
 });
 
+test('dashboard page is displayed if user has no wallet', function () {
+    $user = User::factory()->create();
+
+    $response = actingAs($user)->get('/');
+
+    $response
+        ->assertOk()
+        ->assertSeeTextInOrder([
+            __('Balance'),
+            '€0.00',
+        ]);
+});
+
 test('send money to a friend', function () {
     $user = User::factory()->has(Wallet::factory()->richChillGuy())->create();
     $recipient = User::factory()->has(Wallet::factory())->create();
