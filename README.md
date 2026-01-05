@@ -88,13 +88,13 @@ On first login after registering, this error is thrown:
 Call to a member function transactions() on null
 ```
 
-| Avec le recule, un message indiquant que l'user n'a pas de wallet et lui proposer d'en créer un aurait été plus "réaliste"
+> Avec le recule, un message indiquant que l'user n'a pas de wallet et lui proposer d'en créer un aurait été plus "réaliste"
 
 ### Feature - Notification when balance is low
 
 When a user balance is low (< 10€), he should be notified by email.
 
-| Définir cette variable quelque par (.env ou autre). Pourquoi pas faire des relances tant que le seuil reste bas.
+> Définir cette variable quelque par (.env ou autre). Pourquoi pas faire des relances tant que le seuil reste bas.
 
 ### Feature - Recurring transfers
 
@@ -120,7 +120,7 @@ If the user has a balance lower than the amount, the transfer should fail and th
 - A GET api endpoint to list recurring transfer (with their status)
 - Any kind of UI in the dashboard
 
-| Pas eu le temps de terminer.
+> Pas eu le temps de terminer.
 
 ### BONUS - Feature - Taking out a loan
 
