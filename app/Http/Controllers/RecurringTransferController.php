@@ -45,7 +45,7 @@ class RecurringTransferController
             'reason' => $request->reason,
         ]);
 
-        dd($request->all(), $recurringTransfer);
+        return redirect()->back()->with('success', 'Recurring transfer created.');
 
     }
 
